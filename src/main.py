@@ -1,7 +1,9 @@
 from kivymd.app import MDApp
 
 from kivy.lang.builder import Builder
+from kivy.core.window import Window
 
+Window.size = (1080/2, 1920/2)
 
 class Main(MDApp):
     def build(self):
