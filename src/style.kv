@@ -1,12 +1,16 @@
 MDScreenManager:
     Screen:
         id: main
+        FitImage:
+            size_hint_y: 3
+            source: 'images/back.jpg'
         MDLabel:
             text: "To Do List"
             font_size: 40
             pos_hint: {'center_x': 0.83,'center_y': 0.9}
         MDTextField:
-            hint_text: "Rectangle mode"
+            id: text_to
+            hint_text: "text"
             mode: "rectangle"
             size_hint: 0.8, 0.1
             font_size: 25
@@ -17,3 +21,5 @@ MDScreenManager:
             font_size: 25
             text_color: "black"
             pos_hint: {'center_x': 0.9,'center_y': 0.8}
+            on_release:
+                app.add_todo()
